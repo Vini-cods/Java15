@@ -57,17 +57,33 @@ public class Main {
 //                }
 //
 //                System.out.println("Faturamento total: R$ " + soma);
-        
-                String[] produtos = {"Produto A", "Produto B", "Produto C", "Produto D"};
-                int[] quantidades = {5, 0, 3, 0}; // Estoque correspondente
 
-                System.out.println("Produtos disponíveis:");
-                for (int i = 0; i < produtos.length; i++) {
-                    if (quantidades[i] == 0) {
-                        continue; // Ignora produtos fora de estoque
+//                String[] produtos = {"Produto A", "Produto B", "Produto C", "Produto D"};
+//                int[] quantidades = {5, 0, 3, 0}; // Estoque correspondente
+//
+//                System.out.println("Produtos disponíveis:");
+//                for (int i = 0; i < produtos.length; i++) {
+//                    if (quantidades[i] == 0) {
+//                        continue; // Ignora produtos fora de estoque
+//                    }
+//                    System.out.println(produtos[i] + " - Quantidade: " + quantidades[i]);
+//                }
+
+
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Informe os códigos de clientes (digite -1 para encerrar):");
+
+                while (true) {
+                    int codigo = scanner.nextInt();
+                    if (codigo == -1) {
+                        break; // Finaliza o loop para código inválido
                     }
-                    System.out.println(produtos[i] + " - Quantidade: " + quantidades[i]);
+                    System.out.println("Código válido: " + codigo);
                 }
+
+                System.out.println("Fim da verificação.");
+
+
 
 
     }
