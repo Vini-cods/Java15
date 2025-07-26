@@ -43,21 +43,32 @@ public class Main {
 //        return cancelado;
 
 
-                Scanner scanner = new Scanner(System.in);
-                double soma = 0;
+//                Scanner scanner = new Scanner(System.in);
+//                double soma = 0;
+//
+//                System.out.println("Informe os valores das vendas do dia (máximo 10). Digite 0 para encerrar:");
+//
+//                for (int i = 0; i < 10; i++) {
+//                    double venda = scanner.nextDouble();
+//                    if (venda == 0) {
+//                        break; // Encerra o loop se o valor da venda for 0
+//                    }
+//                    soma += venda;
+//                }
+//
+//                System.out.println("Faturamento total: R$ " + soma);
+        
+                String[] produtos = {"Produto A", "Produto B", "Produto C", "Produto D"};
+                int[] quantidades = {5, 0, 3, 0}; // Estoque correspondente
 
-                System.out.println("Informe os valores das vendas do dia (máximo 10). Digite 0 para encerrar:");
-
-                for (int i = 0; i < 10; i++) {
-                    double venda = scanner.nextDouble();
-                    if (venda == 0) {
-                        break; // Encerra o loop se o valor da venda for 0
+                System.out.println("Produtos disponíveis:");
+                for (int i = 0; i < produtos.length; i++) {
+                    if (quantidades[i] == 0) {
+                        continue; // Ignora produtos fora de estoque
                     }
-                    soma += venda;
+                    System.out.println(produtos[i] + " - Quantidade: " + quantidades[i]);
                 }
 
-                System.out.println("Faturamento total: R$ " + soma);
-           
 
     }
 }
