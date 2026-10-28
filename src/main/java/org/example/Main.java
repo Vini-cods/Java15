@@ -74,6 +74,14 @@ public class Main {
                 System.out.println("Informe os códigos de clientes (digite -1 para encerrar):");
 
                 while (true) {
+                    if (!scanner.hasNext()) {
+                        break;
+                    }
+                    if (!scanner.hasNextInt()) {
+                        System.out.println("Código inválido. Informe um número inteiro.");
+                        scanner.next();
+                        continue;
+                    }
                     int codigo = scanner.nextInt();
                     if (codigo == -1) {
                         break; // Finaliza o loop para código inválido
@@ -82,6 +90,7 @@ public class Main {
                 }
 
                 System.out.println("Fim da verificação.");
+                scanner.close();
 
 
 
